@@ -4,16 +4,18 @@ using System.Text;
 
 namespace SimpleChess
 {
-    internal class Bishop : Piece
+    class Bishop : Piece
     {
-        public Bishop(string symbol) : base(symbol)
+        public Bishop() : base("LPR")
         {
-            Symbol = symbol;
+            
         }
 
         public override bool Move(string fromPosition, string toPosition)
         {
-            throw new NotImplementedException();
+            var diffCol = fromPosition[0] - toPosition[0];
+            var diffRow = fromPosition[1] - toPosition[1];
+            return Math.Abs(diffRow) == Math.Abs(diffCol);
         }
     }
 }

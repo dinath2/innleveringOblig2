@@ -12,5 +12,7 @@ namespace SimpleChess
         }
 
         public abstract bool Move(string fromPosition, string toPosition);
+
     }
+ 
 }

@@ -4,16 +4,16 @@ using System.Text;
 
 namespace SimpleChess
 {
-    internal class Rook : Piece
+    class Rook : Piece
     {
-        public Rook(string symbol) : base(symbol)
+        public Rook() : base("TRN")
         {
 
         }
 
         public override bool Move(string fromPosition, string toPosition)
         {
-            throw new NotImplementedException();
+            return fromPosition[0] == toPosition[0] || fromPosition[1] == toPosition[1];
         }
     }
 }

@@ -13,16 +13,6 @@ namespace SimpleChess
             else _pieces.Add(position, piece);
         }
 
-        internal void Set(string v, Rook rook)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void Set(string v, Bishop bishop)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool Move(string fromPosition, string toPosition)
         {
             if (HasValue(toPosition) || !HasValue(fromPosition)) return false;
